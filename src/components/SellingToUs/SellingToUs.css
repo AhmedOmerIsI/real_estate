@@ -1,0 +1,32 @@
+.comparison-section {
+    padding: 20px;
+    background-color: #f8f8f8; /* Light background for contrast */
+    margin-top: 20px; /* Adjust margin as needed */
+  }
+  
+  .comparison-title {
+    font-size: 24px;
+    margin-bottom: 10px;
+  }
+  
+  .comparison-description {
+    margin-bottom: 20px;
+    font-size: 16px;
+  }
+  
+  .comparison-table {
+    width: 100%;
+    border-collapse: collapse;
+  }
+  
+  .comparison-table th,
+  .comparison-table td {
+    border: 1px solid #ddd;
+    padding: 8px;
+    text-align: left;
+  }
+  
+  .comparison-table th {
+    background-color: #f2f2f2;
+  }
+  

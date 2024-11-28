@@ -1,0 +1,65 @@
+
+.mail-page {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    
+  }
+  
+  .mail-container {
+    padding: 30px;
+    border-radius: 10px;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.7);
+    width: 100%;
+    max-width: 500px;
+    text-align: center;
+  }
+  
+  .mail-title {
+  font-weight: bold;
+  font-size: 2rem;
+  margin-bottom: 10px;
+  }
+  
+  .mail-form {
+    display: flex;
+    flex-direction: column;
+  }
+  
+  .mail-input,
+  .mail-textarea {
+    width: 100%;
+    padding: 15px;
+    margin-top: 12px;
+    margin-bottom: 15px;
+    border: 1px solid #000000;
+    border-radius: 5px;
+    font-size: 16px;
+    transition: all 0.3s ease;
+    overflow: hidden;
+    box-shadow: orange;
+  }
+
+.mail-input:focus,
+.mail-textarea:focus {
+  transform: scale(1.05); 
+  box-shadow: 0px 4px 12px rgb(111, 65, 0); 
+  border: 5px;
+  border-color: orange;
+}
+
+  .mail-textarea {
+    resize: none;
+    height: 100px;
+  }
+  
+  .mail-button {
+    padding: 15px;
+    border: none;
+    border-radius: 5px;
+    font-size: 16px;
+    width: fit-content;
+  }
+  
+  

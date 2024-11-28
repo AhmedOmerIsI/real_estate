@@ -1,0 +1,80 @@
+.hero-wrapper {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  width: 100%;
+  min-height: 100vh; /* Ensures the hero section takes up the full height */
+  background: rgba(0, 0, 0, 0.5); /* Add a semi-transparent overlay */
+}
+
+
+
+.hero-container {
+  z-index: 1; /* Keeps the text on top of the background image */
+  max-width: 500px;
+  padding: 20px;
+  text-align: center;
+}
+
+.heading {
+  font-size: 48px;
+
+}
+
+.subtitle {
+  margin-bottom: 6rem;
+  color: orange; /* Visible text color */
+}
+
+.transparent-field {
+  background: linear-gradient(
+    to right,
+    rgba(0, 0, 0, 0.8),
+    rgb(50, 43, 43),
+    rgb(153, 120, 36)
+  ); /* Linear gradient from black to goldenrod */
+  padding: 20px;
+  border-radius: 10px;
+  max-width: 600px;
+  width: 100%;
+  text-align: center;
+  transform: translateY(-30%); /* Move the field up relative to its position */
+  z-index: 1;
+}
+
+.headingText {
+  font-size: 24px;
+  color: white;
+  margin-bottom: 20px;
+}
+
+.bulletPoints {
+  text-align: left;
+  list-style-type: none;
+  margin: 0;
+  padding-left: 0;
+  color: white;
+}
+
+.bulletPoints li {
+  margin-bottom: 10px;
+  display: flex;
+  align-items: flex-start;
+}
+
+.checkmark {
+  margin-right: 10px;
+  font-size: 0.9rem;
+  flex-shrink: 0;
+}
+
+.bulletPoints li strong {
+  margin-left: 5px;
+  flex-grow: 1;
+}
+
+.bulletPoints li {
+  flex-wrap: wrap;
+}

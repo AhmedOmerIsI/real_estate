@@ -1,0 +1,19 @@
+.h-wrapper{
+    color: antiquewhite;
+}
+
+.h-container{
+
+    justify-content: space-between;
+    padding-top: 1rem;
+    padding-bottom: 1rem;
+    color: var(--secondary)
+}
+
+.h-menu{
+    justify-content: right;
+    gap:2rem;
+}
+.h-menu>*:hover{
+    cursor:pointer;
+}

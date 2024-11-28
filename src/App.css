@@ -1,38 +1,89 @@
-.App {
-  text-align: center;
+html {
+  scroll-behavior: smooth;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
-}
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
+.App{
+  position: relative;
+  overflow-x:clip ;
+  
+}
+.App>:nth-child(1){
+  background: var(--black);
+  position: relative;
+}
+.white-gradient{
+  position: absolute;
+  width: 20rem;
+  height: 20rem;
+  background-color: rgba(104, 86, 14, 0.8);
+  filter: blur(100px);
+  border-radius: 100px;
+}
+.logo {
+  width: 80px; /* Adjust size to make it larger */
+  height: auto; /* Maintain aspect ratio */
+  position: fixed; /* Keep it fixed at the top */
+  top: 5px; /* Distance from the top */
+  left: 60px; /* Distance from the left */
+  z-index: 10; /* Ensure it appears above other content */
+  border-radius: 80px; /* Add rounded corners */
+  background-color: rgba(0, 0, 0, 0.5); /* White background with transparency */
+  padding: 2px; /* Add padding for some space around the logo */
+}
+@media (max-width: 768px) { /* Adjust the breakpoint as needed */
+  .logo {
+    left: 10px; /* Move further left on smaller screens */
   }
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+@media (max-width: 480px) { /* Further adjustments for very small screens */
+  .logo {
+    left: 5px; /* Push even further left */
+    width: 100px; /* Optionally make the logo smaller */
+  }
+}
+
+
+.page-container {
   display: flex;
-  flex-direction: column;
+  justify-content: space-between;
   align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+  padding: 40px;
+  gap: 20px;
+  min-height: 100vh; /* Full viewport height */
+  background-image: url('../public/r2.png');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  position: relative;
+  overflow: hidden; /* Ensure no overflow */
 }
 
-.App-link {
-  color: #61dafb;
+.page-container::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.7); /* Dark transparent overlay */
+  z-index: 1; /* Ensure it's on top of the background but below content */
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
+/* Ensure the content remains on top of the background and overlay */
+.hero-wrapper, .mail-page {
+  flex: 1;
+  z-index: 2; /* Bring content above the overlay */
+  background: rgba(0, 0, 0, 0.8); /* Optional: Maintain a transparent black background */
+  padding: 20px;
+  border-radius: 10px;
+}
+
+@media (max-width: 768px) {
+  .page-container {
+    flex-direction: column; /* Stacks components on smaller screens */
   }
 }
+
+

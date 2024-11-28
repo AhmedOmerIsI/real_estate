@@ -1,0 +1,28 @@
+.values-section {
+    padding: 40px;
+    background-color: #f9f9f9; /* Light background for contrast */
+  }
+  
+  .values-title {
+    text-align: center;
+    font-size: 2rem;
+    margin-bottom: 30px;
+  }
+  
+  .values-list {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around; /* Distributes items evenly */
+  }
+  
+  .value-item {
+    width: 30%; /* Adjust width as needed */
+    text-align: center;
+    margin-bottom: 20px;
+  }
+  
+  .value-icon {
+    font-size: 2rem; /* Adjust icon size */
+    margin-bottom: 10px;
+  }
+  
