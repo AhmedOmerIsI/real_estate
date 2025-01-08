@@ -7,7 +7,7 @@ const Hero = () => {
     <section className="hero-wrapper">
       <div className=" flexCenter hero-container ">
         <div className="primaryText heading">GIVE US A CALL</div>
-        <div className="orangeText subtitle">Phone number placeholder</div>
+        <div className="orangeText subtitle">+1 (832) 740-9329</div>
       </div>
       <div className="image-background">
         <div className="transparent-field">

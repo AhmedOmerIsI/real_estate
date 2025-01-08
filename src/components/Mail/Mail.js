@@ -1,5 +1,7 @@
 import React, { useState } from "react";
 import emailjs from "emailjs-com";
+import { ToastContainer, toast } from "react-toastify";
+import "react-toastify/dist/ReactToastify.css";
 
 import "./Mail.css";
 
@@ -29,11 +31,24 @@ function Mail({ mailInputRef }) {
       .then(
         (result) => {
           console.log("Email sent successfully:", result.text);
-          alert("Message sent successfully!");
+          // Show success toast
+          toast.success(
+            "Message sent successfully! We'll get in touch shortly.",
+            {
+              position: "top-center", // Correct way to specify position
+              autoClose: 3000,
+              closeOnClick: true,
+            }
+          );
         },
         (error) => {
           console.log("Failed to send email:", error.text);
-          alert("Failed to send message. Please try again.");
+          // Show error toast
+          toast.error("Failed to send message. Please try again.", {
+            position: "top-center",
+            autoClose: 3000,
+            closeOnClick: true,
+          });
         }
       );
 
@@ -45,6 +60,7 @@ function Mail({ mailInputRef }) {
 
   return (
     <section className="mail-page" id="mail">
+      <ToastContainer />
       <div className="mail-container">
         <span className="orangeText mail-title">Contact an Agent</span>
         <form className="mail-form flexColCenter" onSubmit={sendEmail}>
